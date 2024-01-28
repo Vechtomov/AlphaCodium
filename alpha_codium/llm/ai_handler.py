@@ -115,6 +115,7 @@ class AiHandler:
                         temperature=temperature,
                         frequency_penalty=frequency_penalty,
                         force_timeout=get_settings().config.ai_timeout,
+                        base_url=get_settings().config.base_url,
                     )
         except (APIError) as e:
             logging.error("Error during OpenAI inference")
